@@ -1,19 +1,28 @@
+/* eslint-disable react/prop-types */
 import "./navbar.css"
 
+// icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 
-const Navbar = () => {
+// router dom
+import { Link } from "react-router-dom"
+
+const Navbar = ({ setDrawer }) => {
   return (
     <nav>
-      <span>LOGO</span>
+      <Link to="/">
+        <span>LOGO</span>
+      </Link>
       <div className="nav-search">
         <input type="text" placeholder="¿Qué estas buscando?"/>
         <FontAwesomeIcon icon={faMagnifyingGlass}/>
       </div>
       <div className="nav-menu_desktop">
-        <FontAwesomeIcon icon={faCartShopping}/>
-        <FontAwesomeIcon icon={faUser}/>
+        <Link to="/carrito">
+          <FontAwesomeIcon icon={faCartShopping}/>
+        </Link>
+        <FontAwesomeIcon icon={faUser} onClick={() => setDrawer("entra")}/>
       </div>
     </nav>
   )
