@@ -1,0 +1,35 @@
+.categorias {
+    display: flex;
+    gap: 7px;
+    margin: 7px;
+    overflow-x: auto;
+}
+
+.categorias a {
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.categorias a p {
+    font-size: .8em;
+    letter-spacing: .5px;
+}
+
+.categorias a img {
+    margin-left: 15px;
+    width: 28px;
+    height: 28px;
+}
+
+.categorias .categorias-cat {
+    background-color: #75c7ff;
+}
+
+.categorias .categorias-prov {
+    background-color: #ffa9e9;
+}
