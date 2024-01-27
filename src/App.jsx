@@ -7,7 +7,6 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import Navbar from "./components/navbar/Navbar"
 import NavSearch from "./components/navbar/NavSearch"
 import Drawer from "./components/drawer/Drawer"
-import ModalBuscador from "./components/modal/ModalBuscador"
 import Categorias from "./components/categorias/Categorias"
 import ArticulosPopulares from "./components/populares/ArticulosPopulares"
 import ProveedoresPopulares from "./components/populares/ProveedoresPopulares"
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <>
-      <ModalBuscador/>
       <Drawer drawer={drawer} setDrawer={setDrawer}/>
       <Navbar setDrawer={setDrawer}/>
       <NavSearch/>
@@ -39,6 +37,18 @@ function App() {
         <Route path="/producto" element={<Producto/>}/>
         <Route path="/*" element={<Navigate to="/"/>}/>
       </Routes>
+
+      {/* Notas: add proveedores
+      <br />
+      para vos con 3 filas y boton
+      <br />
+      funcionalidad carrito, cards y buscador
+      <br />
+      sesion y botones
+      <br />
+      un footer y un header
+      <br />
+      resto e secciones como sobre nosotros, contacto, etc. */}
     </>
   )
 }

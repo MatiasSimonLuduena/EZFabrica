@@ -1,5 +1,9 @@
 /* eslint-disable react/prop-types */
 import "./navbar.css"
+import { useState } from "react"
+
+// components
+import ModalBuscador from "./ModalBuscador"
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -9,14 +13,20 @@ import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-sol
 import { Link } from "react-router-dom"
 
 const Navbar = ({ setDrawer }) => {
+  const [seleccionado, setSeleccionado] = useState(false);
+
   return (
     <nav>
       <Link to="/">
         <span>LOGO</span>
       </Link>
       <div className="nav-search">
-        <input type="text" placeholder="¿Qué estas buscando?"/>
+        <input type="text" placeholder="¿Qué estas buscando?"
+          onFocus={() => setSeleccionado(true)}
+          onBlur={() => setSeleccionado(false)}
+        />
         <FontAwesomeIcon icon={faMagnifyingGlass}/>
+        {seleccionado && <ModalBuscador/>}
       </div>
       <div className="nav-menu_desktop">
         <Link to="/carrito">
