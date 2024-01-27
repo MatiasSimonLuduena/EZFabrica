@@ -26,12 +26,12 @@ function App() {
       <NavSearch/>
       <Routes>
         <Route path="/" element={
-          <>
+          <div className="container">
             <Categorias/>
             <ArticulosPopulares/>
             <ProveedoresPopulares/>
             <ParaTi/>
-          </>
+          </div>
         }/>
         <Route path="/lista" element={<Listado/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
