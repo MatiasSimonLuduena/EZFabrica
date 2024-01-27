@@ -11,9 +11,10 @@ import ModalBuscador from "./components/modal/ModalBuscador"
 import Categorias from "./components/categorias/Categorias"
 import ArticulosPopulares from "./components/populares/ArticulosPopulares"
 import ProveedoresPopulares from "./components/populares/ProveedoresPopulares"
-import ParaTi from "./components/paraTi/ParaTi"
+import ParaTi from "./components/populares/ParaTi"
 import Listado from "./components/listado/Listado"
 import Carrito from "./components/carrito/Carrito"
+import Producto from "./components/producto/Producto"
 
 function App() {
   const [drawer, setDrawer] = useState(null);
@@ -35,6 +36,7 @@ function App() {
         }/>
         <Route path="/lista" element={<Listado/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
+        <Route path="/producto" element={<Producto/>}/>
         <Route path="/*" element={<Navigate to="/"/>}/>
       </Routes>
     </>
