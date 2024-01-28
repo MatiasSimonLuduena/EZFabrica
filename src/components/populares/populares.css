@@ -60,3 +60,45 @@
     font-weight: 300;
     font-size: .8em;
 }
+
+/* PARA TI */
+.para-ti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 10px;
+    padding: 0 25px;
+}
+
+.para-ti .para-ti-card {
+    flex: 1;
+    background-color: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.para-ti .para-ti-card h5 {
+    font-size: 1em;
+    margin: 10px 5px;
+}
+
+.para-ti .para-ti-card p {
+    font-size: 1.2em;
+    color: green;
+}
+
+.para-ti .para-ti-card h6 {
+    margin: 10px 3px 0;
+    font-weight: 300;
+    font-size: .8em;
+}
+
+@media (max-width: 520px) {
+    .para-ti .para-ti-card {
+        flex: none;
+        width: calc(50% - 5px);
+    }
+
+    .para-ti .para-ti-card img {
+        width: 100%;
+    }
+}

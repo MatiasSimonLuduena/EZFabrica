@@ -88,5 +88,86 @@ export const articulos = [
         descripcion: "Zapatillas cuatro descripción larga",
         categoria: "Zapatillas",
         proveedor: "Proveedor uno"
+    },
+    {
+        id: 11,
+        img: ["short-demo.png"],
+        titulo: "Short cuatro",
+        precio: 5000,
+        descripcion: "Shorts cuatro descripción larga",
+        categoria: "Shorts",
+        proveedor: "Proveedor seis"
+    },
+    {
+        id: 12,
+        img: ["remera-demo.jpg"],
+        titulo: "Remeras cuatro",
+        precio: 6500,
+        descripcion: "Remeras cuatro descripción larga",
+        categoria: "Remeras",
+        proveedor: "Proveedor dos"
+    }
+]
+
+export const proveedores = [
+    {
+        id: 1,
+        nombre: "Proveedor uno",
+        direccion: "La Salada pasillo 5 local 4",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 2,
+        nombre: "Proveedor dos",
+        direccion: "La Salada pasillo 8 local 2",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 3,
+        nombre: "Proveedor tres",
+        direccion: "La Salada pasillo 1 local 5",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 4,
+        nombre: "Proveedor cuatro",
+        direccion: "La Salada pasillo 10 local 5",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 5,
+        nombre: "Proveedor cinco",
+        direccion: "La Salada pasillo 8 local 10",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 6,
+        nombre: "Proveedor seis",
+        direccion: "La Salada pasillo 1 local 5",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 7,
+        nombre: "Proveedor siete",
+        direccion: "La Salada pasillo 5 local 2",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 8,
+        nombre: "Proveedor ocho",
+        direccion: "La Salada pasillo 1 local 6",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 9,
+        nombre: "Proveedor nueve",
+        direccion: "La Salada pasillo 8 local 5",
+        img: "proveedores-demo.jpg"
+    },
+    {
+        id: 10,
+        nombre: "Proveedor diez",
+        direccion: "La Salada pasillo 1 local 1",
+        img: "proveedores-demo.jpg"
     }
 ]

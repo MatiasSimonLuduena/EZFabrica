@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Card = ({ item }) => {
   return (
-    <Link to="/producto">
+    <Link to={`/producto/${item.id}`}>
       <div className="card">
         <img src={item.img} alt={item.titulo} />
         <h5>{item.titulo}</h5>

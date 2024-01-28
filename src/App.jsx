@@ -14,6 +14,7 @@ import ParaTi from "./components/populares/ParaTi"
 import Listado from "./components/listado/Listado"
 import Carrito from "./components/carrito/Carrito"
 import Producto from "./components/producto/Producto"
+import Proveedor from "./components/proveedor/Proveedor"
 
 function App() {
   const [drawer, setDrawer] = useState(null);
@@ -23,6 +24,7 @@ function App() {
       <Drawer drawer={drawer} setDrawer={setDrawer}/>
       <Navbar setDrawer={setDrawer}/>
       <NavSearch/>
+      <div className="ocupa-lugar-delnav"></div>
       <Routes>
         <Route path="/" element={
           <div className="container">
@@ -34,21 +36,22 @@ function App() {
         }/>
         <Route path="/lista" element={<Listado/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
-        <Route path="/producto" element={<Producto/>}/>
+        <Route path="/producto/:id" element={<Producto/>}/>
+        <Route path="/proveedor/:id" element={<Proveedor/>}/>
         <Route path="/*" element={<Navigate to="/"/>}/>
       </Routes>
 
-      {/* Notas: add proveedores
-      <br />
-      para vos con 3 filas y boton
-      <br />
-      funcionalidad carrito, cards y buscador
-      <br />
-      sesion y botones
-      <br />
-      un footer y un header
-      <br />
-      resto e secciones como sobre nosotros, contacto, etc. */}
+      {/*
+        el martes => paginas producto y proveedor
+        <br />
+        funcionalidad carrito, buscador y lista
+        <br />
+        sesion y botones
+        <br />
+        un footer y un header
+        <br />
+        resto e secciones como sobre nosotros, contacto, etc.
+      */}
     </>
   )
 }

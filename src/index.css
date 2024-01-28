@@ -18,9 +18,23 @@ a {
     margin: 0 5%;
 }
 
+.ocupa-lugar-delnav {
+    height: 50px;
+}
+
+.hr {
+    width: 95%;
+    margin: 5px auto;
+    height: 1px;
+    background-color: rgb(200, 200, 200);
+}
+
 @media (max-width: 500px) {
     .container {
         margin: 0;
         overflow-x: hidden;
+    }
+    .ocupa-lugar-delnav {
+        height: 83px;
     }
 }
