@@ -12,8 +12,12 @@ import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-sol
 // router dom
 import { Link } from "react-router-dom"
 
+// redux
+import { useSelector } from "react-redux";
+
 const Navbar = ({ setDrawer }) => {
   const [seleccionado, setSeleccionado] = useState(false);
+  const state = useSelector(state => state.cart)
 
   return (
     <nav>
@@ -31,6 +35,7 @@ const Navbar = ({ setDrawer }) => {
       <div className="nav-menu_desktop">
         <Link to="/carrito">
           <FontAwesomeIcon icon={faCartShopping}/>
+          <span className="nav-menu_span">{state.length}</span>
         </Link>
         <FontAwesomeIcon icon={faUser} onClick={() => setDrawer("entra")}/>
       </div>

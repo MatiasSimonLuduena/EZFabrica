@@ -18,7 +18,7 @@ export const articulos = [
         proveedor: "Proveedor dos"
     },
     {
-        id: 2,
+        id: 3,
         img: ["img-demo.jpg"],
         titulo: "Zapatillas tres",
         precio: 18000,
