@@ -12,7 +12,7 @@ const NavSearch = () => {
     <div className="navbottom-search">
       <input type="text" placeholder="¿Qué estas buscando?"
         onFocus={() => setSeleccionado(true)}
-        onBlur={() => setSeleccionado(false)}
+        onBlur={() => setTimeout(() => setSeleccionado(false), 100)}
       />
       <FontAwesomeIcon icon={faMagnifyingGlass}/>
       {seleccionado && <ModalBuscador/>}

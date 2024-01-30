@@ -126,9 +126,11 @@ nav .nav-menu_desktop .nav-menu_span {
     top: 49px;
     width: 50vw;
     max-width: 380px;
-    height: 300px;
+    height: auto;
+    max-height: 50vh;
     z-index: 4;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
 }
 
 @media (max-width: 500px) {
@@ -136,6 +138,22 @@ nav .nav-menu_desktop .nav-menu_span {
         top: 82px;
         width: 100vw;
         height: 100%;
-        z-index: 4;
     } 
+}
+
+.modal-buscador .m-buscador_card {
+    margin: 8px 0;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+}
+
+.modal-buscador .m-buscador_card svg {
+    position: sticky;
+    margin-right: 10px;
+}
+
+.modal-buscador .m-buscador_card p {
+    font-size: .95em;
 }

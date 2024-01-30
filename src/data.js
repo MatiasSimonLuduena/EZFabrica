@@ -171,3 +171,7 @@ export const proveedores = [
         img: "proveedores-demo.jpg"
     }
 ]
+
+export const busquedaPopular = ["Zapatillas", "Remeras", "Short"]
+
+export const busquedaReciente = ["Zapatillas de hombre", "Remeras oversize"]

@@ -34,7 +34,7 @@ function App() {
             <ParaTi/>
           </div>
         }/>
-        <Route path="/lista" element={<Listado/>}/>
+        <Route path="/lista/:type/:text" element={<Listado/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
         <Route path="/producto/:id" element={<Producto/>}/>
         <Route path="/proveedor/:id" element={<Proveedor/>}/>
@@ -42,15 +42,17 @@ function App() {
       </Routes>
 
       {/*
-        el martes => data y paginas producto y proveedor
+        con proveedores => 
+          data y paginas ver todos las categoria, proveedor productos
+          bugs carrito
+          buscador, lista de todos los ... , filtros funcional
         <br />
-        funcionalidad buscador y lista
-        <br />
+
         sesion y botones
         <br />
         un footer y un header
         <br />
-        resto e secciones como sobre nosotros, contacto, etc.
+        resto de secciones como sobre nosotros, contacto, etc.
         <br />
         Optimizar codigo y hacerlo mas legible
       */}
