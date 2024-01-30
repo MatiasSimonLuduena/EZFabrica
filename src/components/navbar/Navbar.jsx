@@ -7,7 +7,7 @@ import ModalBuscador from "./ModalBuscador"
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 
 // router dom
 import { Link } from "react-router-dom"
@@ -15,14 +15,14 @@ import { Link } from "react-router-dom"
 // redux
 import { useSelector } from "react-redux";
 
-const Navbar = ({ setDrawer }) => {
+const Navbar = () => {
   const [seleccionado, setSeleccionado] = useState(false);
   const state = useSelector(state => state.cart)
 
   return (
     <nav>
       <Link to="/">
-        <span>LOGO</span>
+        <span>EZFabrica</span>
       </Link>
       <div className="nav-search">
         <input type="text" placeholder="¿Qué estas buscando?"
@@ -37,7 +37,6 @@ const Navbar = ({ setDrawer }) => {
           <FontAwesomeIcon icon={faCartShopping}/>
           <span className="nav-menu_span">{state.length}</span>
         </Link>
-        <FontAwesomeIcon icon={faUser} onClick={() => setDrawer("entra")}/>
       </div>
     </nav>
   )

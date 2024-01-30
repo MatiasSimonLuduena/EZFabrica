@@ -1,28 +1,26 @@
-import { useState } from "react"
-
 // router dom
 import { Routes, Route, Navigate } from "react-router-dom"
 
 // components
 import Navbar from "./components/navbar/Navbar"
 import NavSearch from "./components/navbar/NavSearch"
-import Drawer from "./components/drawer/Drawer"
 import Categorias from "./components/categorias/Categorias"
 import ArticulosPopulares from "./components/populares/ArticulosPopulares"
 import ProveedoresPopulares from "./components/populares/ProveedoresPopulares"
 import ParaTi from "./components/populares/ParaTi"
+import Footer from "./components/footer/Footer"
+
+// Páginas
 import Listado from "./components/listado/Listado"
 import Carrito from "./components/carrito/Carrito"
 import Producto from "./components/producto/Producto"
 import Proveedor from "./components/proveedor/Proveedor"
 
 function App() {
-  const [drawer, setDrawer] = useState(null);
 
   return (
     <>
-      <Drawer drawer={drawer} setDrawer={setDrawer}/>
-      <Navbar setDrawer={setDrawer}/>
+      <Navbar/>
       <NavSearch/>
       <div className="ocupa-lugar-delnav"></div>
       <Routes>
@@ -40,6 +38,7 @@ function App() {
         <Route path="/proveedor/:id" element={<Proveedor/>}/>
         <Route path="/*" element={<Navigate to="/"/>}/>
       </Routes>
+      <Footer/>
 
       {/*
         con proveedores => 
@@ -48,12 +47,16 @@ function App() {
           buscador, lista de todos los ... , filtros funcional
         <br />
 
-        sesion y botones
+        header: mensaje de valor y llamadas a la accion
+        secciones:
+          pago seguro, plataformas.
+          envios y tiempo, empresa y seguimiento.
+          ?garantia y reembolso.
+          cantidad de ofertas y categorias.
+          ?comparacion de precios con otras tiendas, margen de ganancias.
+          ?negociacion con el proveedor.
         <br />
-        un footer y un header
-        <br />
-        resto de secciones como sobre nosotros, contacto, etc.
-        <br />
+
         Optimizar codigo y hacerlo mas legible
       */}
     </>
